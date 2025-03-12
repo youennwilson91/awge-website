@@ -33,7 +33,7 @@ function App() {
           PRESS START
         </button>
       </div>
-      <h2 className="copyright">©  2024 AWGE</h2>
+      <h2 className="copyright">© 2024 Youenn WILSON</h2>
     </div>
   );
 }

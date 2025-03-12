@@ -4,20 +4,11 @@ import { handleRouteClick, turnScreenOn } from '../utils/screenTransitions';
 import '../CSS/Home.css';
 import '../CSS/ScreenEffects.css';
 import Item from '../components/Item';
+import { grid } from './Router.jsx'
 
 function Home() {
   const navigate = useNavigate();
-  
-  const grid = [
-    {id: 1, img: '/buttons/user-button.gif', text: 'FORUM', route: '/forum', color: "#d15f18"},
-    {id: 2, img: '/buttons/awgeDVD-button.gif', text: 'DVD', route: '/dvd', color: "black"},
-    {id: 3, img: '', text: '', class: '', route: ''},
-    {id: 4, img: '', text: '', class: '', route: ''},
-    {id: 5, img: '/buttons/shop-button.gif', text: 'SHOP', route: '/shop', color: "#2A440B"},
-    {id: 6, img: '/buttons/dbd-button.gif', text: 'A$AP ROCKY', route: '/asap-rocky', color: "black"},
-    {id: 7, img: '/buttons/about-button.gif', text: 'ABOUT', route: '/about', color: "#d15f18"},
-    {id: 8, img: '/buttons/pager-button.gif', text: 'CONTACT',  route: '/contact', color: "#2A440B"}
-  ]
+
 
   // Appliquer l'animation d'allumage au chargement du composant
   useEffect(() => {

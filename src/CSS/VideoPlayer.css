@@ -1,0 +1,45 @@
+.video-player-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    position: relative;
+    z-index: 10;
+}
+
+
+
+.custom-controls {
+    position: absolute;
+    top: 85vh;
+    left: 10vw;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.play-pause-btn {
+    cursor: pointer;
+}
+
+.time-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    width: 20vw;
+    cursor: pointer;
+}
+
+.volume-controls {
+    left: 20vw;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
