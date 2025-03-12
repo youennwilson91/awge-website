@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'PressStart';
+  src: url('/fonts/PressStart2P-Regular.woff2') format('woff2'),
+       url('/fonts/PressStart2P-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+
+/* Optionnel : Appliquer à tout le site */
+body {
+  font-family: 'PressStart', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: black;
+  position: relative;
+}
+
+/* Ajouter un pseudo-élément pour la bordure qui sera toujours au-dessus */
+#root::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/border.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  pointer-events: none; /* Permet aux clics de passer à travers */
+  z-index: 9999; /* Valeur très élevée pour s'assurer qu'elle est au-dessus de tout */
+}
