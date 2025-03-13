@@ -29,7 +29,7 @@ export default function About() {
             <h1>#1 NEVER REVEAL WHAT AWGE MEANS<br />#2 WHEN IN DOUBT ALWAYS REFER TO RULE #1</h1>
             <hr />
             <h1 onClick={() => handleRouteClick(navigate, '/artists')}>Artists</h1><br />
-            <h1 onClick={() => handleRouteClick(navigate, '/dvd-vol-3')}>People</h1><br />
+            <h1 onClick={() => handleRouteClick(navigate, '/people')}>People</h1><br />
         </p>
     </div>
   )

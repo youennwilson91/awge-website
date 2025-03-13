@@ -19,7 +19,7 @@ export default function BuyOut({ item }) {
                 <h2>Price: ${item.price || '19.99'}</h2>
                 
                 <div className="buyout-actions">
-                    <h2 onClick={() => dispatch(addToCart(item))}>Add to Cart</h2>
+                    <h2 onClick={() => dispatch(addToCart(item))}> {"> Add to Cart <"} </h2>
                 </div>
             </div>
         </div>

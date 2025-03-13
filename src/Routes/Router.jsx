@@ -8,6 +8,7 @@ import VideoPlayer from '../components/VideoPlayer';
 import About from './About';
 import Artists from './Artists';
 import Artist from '../components/Artist';
+import People from './People';
 
 const router = createBrowserRouter([
   {path: "/", element: <App />},
@@ -20,7 +21,8 @@ const router = createBrowserRouter([
   {path: "shop", element: <Shop />},
   {path: "about", element: <About />},
   {path: "artist", element: <Artist />},
-  {path: "artists", element: <Artists />}
+  {path: "artists", element: <Artists />},
+  {path: "people", element: <People />}
 ]);
 
 
@@ -54,7 +56,17 @@ export const artists = [
   {id:3, name: "Kelvin Krash", info: {info1: ". London, UK", info2: ". Producer"}, img: '/artists/artist-krash.jpg', bg: '/artists/artist-krash.gif'},
   {id:4, name: "Smooky Margielaa", info: {info1: ". South Bronx, NY", info2: ". Margielaa Mad Man "}, img: '/artists/artist-smooky.jpg', bg: '/artists/artist-smooky.gif'},
   {id:5, name: "A$AP Nast", info: {info1: ". Harlem, NY", info2: ". Nast/Nasty Baby"}, img: '/artists/artist-nast.jpg', bg: '/artists/artist-nast.gif'},
-  {id:6, name: "Playboi Carti", info: {info1: ". Southside Atlanta", info2: ". Cash Carti/Sir Cartier/Yourng Carti"}, img: '/artists/artist-carti.jpg', bg: '/artists/artist-carti.gif'}
+  {id:6, name: "Playboi Carti", info: {info1: ". Southside Atlanta", info2: ". Cash Carti/Sir Cartier/Young Carti"}, img: '/artists/artist-carti.jpg', bg: '/artists/artist-carti.gif'}
+]
+
+export const people =[
+  {id:1, name: "Matt Henson-Fashion"},
+  {id:2, name: "Hector Delgado-Music"},
+  {id:3, name: "Hidjifilms-Video"},
+  {id:4, name: "YGA-Director"},
+  {id:5, name: "Wally Sajimi-Tech"},
+  {id:6, name: "Bladi Corniel-Photo"},
+  {id:7, name: "Jimmy Regular-Video"}
 ]
 
 export default router;
