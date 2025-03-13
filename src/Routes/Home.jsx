@@ -9,7 +9,6 @@ import { grid } from './Router.jsx'
 function Home() {
   const navigate = useNavigate();
 
-
   // Appliquer l'animation d'allumage au chargement du composant
   useEffect(() => {
     // Petit délai pour s'assurer que le DOM est prêt

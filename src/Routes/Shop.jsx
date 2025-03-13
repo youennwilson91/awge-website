@@ -66,6 +66,7 @@ export default function Shop() {
                         </div>
                     ))}
                 </div>
+                <hr />
                 <h2>Total: ${total}</h2>
                 <h2 className='pay-button'>$ PAY $</h2>
             </div>
