@@ -23,7 +23,7 @@ function Artists() {
               src="/buttons/return-button.gif" 
               alt="return" 
               className='return-button-artists' 
-              onClick={() => handleRouteClick(navigate, '/artists')}
+              onClick={() => handleRouteClick(navigate, '/home')}
             />
             <div className="artists-menu">
                 <h1 className="artists-menu-header">ARTISTS</h1>
