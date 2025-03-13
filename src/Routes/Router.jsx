@@ -24,10 +24,10 @@ export const dvd = [
 ]
 
 export const shopping_grid = [
-  {id: 1, img: '/shop/shop-button.gif', text: 'HATS'},
-  {id: 2, img: '/shop/tee.gif', text: 'TEES'},
-  {id: 3, img: '/shop/jeans.gif', text: 'JEANS'},
-  {id: 4, img: '/shop/grillz.gif', text: 'GRILLZ'}
+  {id: 1, img: '/shop/shop-button.gif', text: 'CAP', price: 39.99},
+  {id: 2, img: '/shop/tee.gif', text: 'TEE', price: 29.99},
+  {id: 3, img: '/shop/jeans.gif', text: 'JEANS', price: 59.99},
+  {id: 4, img: '/shop/grillz.gif', text: 'GRILLZ', price: 79.99}
 ]
 
 const router = createBrowserRouter([
