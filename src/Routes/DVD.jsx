@@ -25,11 +25,11 @@ export default function DVD() {
               className='return-button-dvd' 
               onClick={() => handleRouteClick(navigate, '/home')}
             />
-        <p className='stars-text'>
-            <h1 onClick={() => handleRouteClick(navigate, '/dvd-vol-1')}>Vol. 1</h1><br />
-            <h1 onClick={() => handleRouteClick(navigate, '/dvd-vol-2')}>Vol. 2</h1><br />
-            <h1 onClick={() => handleRouteClick(navigate, '/dvd-vol-3')}>Vol. 3</h1><br />
-        </p>
+        <div className='stars-text'>
+            <h1 className='text-hover' onClick={() => handleRouteClick(navigate, '/dvd-vol-1')}>Vol. 1</h1><br />
+            <h1 className='text-hover' onClick={() => handleRouteClick(navigate, '/dvd-vol-2')}>Vol. 2</h1><br />
+            <h1 className='text-hover' onClick={() => handleRouteClick(navigate, '/dvd-vol-3')}>Vol. 3</h1><br />
+        </div>
     </div>
   )
 }

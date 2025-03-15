@@ -38,9 +38,9 @@ function Home() {
             </div>
         </div>
         <img src="/media-background.gif" alt="" className="media-gif" />
-        <div className="vhs-container">
+        <div className="vhs-container" onClick={() => handleRouteClick(navigate, '/media')}>
             <img src="/buttons/vhs-camera-button.gif" alt="" />
-            <p className="media-text" onClick={() => handleRouteClick(navigate, '/media')}>MEDIA</p>
+            <p className="media-text">MEDIA</p>
         </div>
     </div>
   );

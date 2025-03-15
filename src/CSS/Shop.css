@@ -43,8 +43,8 @@
     grid-template-columns: 20vw 20vw;
     grid-template-rows:  20 vh 20vh;
     gap: 0px;
-    left: 30vw;
-    top: 20vh;
+    left: 0vw;
+    top: 10vh;
     color: rgba(255, 255, 255, 0.865);
     z-index: 20;
 }
@@ -88,16 +88,17 @@
 
 
 .shop-buy-out-container {
-    position: relative;
-    top: -60vh;
-    left: 32vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 35vw;
     height: 65vh;
     background-color: black;
-    z-index: 25;
+    z-index: 9997;
     opacity: 0.9;
     color: white;
-
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .shop-buy-out-container h1 {
@@ -117,4 +118,3 @@
 .buyout-actions:hover {
     color: greenyellow;
 }
-

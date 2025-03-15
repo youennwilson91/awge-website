@@ -24,13 +24,13 @@ export default function About() {
               className='return-button-dvd' 
               onClick={() => handleRouteClick(navigate, '/home')}
             />
-        <p className='stars-text'>
+        <div className='stars-text'>
             <h1>Rules</h1>
             <h1>#1 NEVER REVEAL WHAT AWGE MEANS<br />#2 WHEN IN DOUBT ALWAYS REFER TO RULE #1</h1>
             <hr />
-            <h1 onClick={() => handleRouteClick(navigate, '/artists')}>Artists</h1><br />
-            <h1 onClick={() => handleRouteClick(navigate, '/people')}>People</h1><br />
-        </p>
+            <h1 className='text-hover' onClick={() => handleRouteClick(navigate, '/artists')}>Artists</h1><br />
+            <h1 className='text-hover' onClick={() => handleRouteClick(navigate, '/people')}>People</h1><br />
+        </div>
     </div>
   )
 }

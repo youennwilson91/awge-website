@@ -23,7 +23,7 @@ function People() {
               src="/buttons/return-button.gif" 
               alt="return" 
               className='return-button-people' 
-              onClick={() => handleRouteClick(navigate, '/artists')}
+              onClick={() => handleRouteClick(navigate, '/about')}
             />
             <div className="people-menu">
                 <h1 className="people-menu-header">PEOPLE</h1>

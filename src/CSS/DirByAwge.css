@@ -1,0 +1,133 @@
+.media-bg {
+    background-color: black;
+    width: 100vw; 
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.media-bg::before {  
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(43, 38, 38, 0) 50%, rgba(0, 0, 0, 0.08) 50%), 
+  linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.005), rgba(0, 0, 255, 0.02));
+  z-index: 9995;  
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+.media-bg::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, .1);
+  opacity: 0;
+  z-index: 9996;  
+  pointer-events: none;
+  animation: flicker .15s infinite;
+}
+
+.return-button-dba {
+    position: absolute;
+    top: 8vw;
+    left: 10vw;
+    width: 5vw;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    z-index: 10;
+    padding: 10px; /* Ajoute de l'espace cliquable autour de l'image */
+    box-sizing: content-box; /* S'assure que le padding s'ajoute à la taille */
+}
+
+.shimmer-neon {
+    width: fit-content;
+    left: 39vw;
+    top: 12vh;
+    font-size: 2.5em;
+    position: relative;
+    background: transparent; /* Fond transparent */
+    color: transparent;
+    -webkit-text-stroke: 2px white; 
+    text-shadow: 
+    0 0 3px #fff, 
+    0 0 8px #29A806, 
+    0 0 12px #29A806, 
+    0 0 15px #228b22;
+    line-height: 1.1;
+    z-index: 10;
+}
+
+
+.awge-stars {
+    box-shadow: 1487px 1841px #FFF, 1667px 494px #FFF, 1672px 582px #FFF, 846px 1305px #FFF, 1713px 648px #FFF, 1727px 54px #FFF, 1932px 618px #FFF, 1361px 83px #FFF, 1644px 1346px #FFF, 484px 1966px #FFF, 1038px 44px #FFF, 1048px 165px #FFF, 1612px 405px #FFF, 1520px 899px #FFF, 466px 1559px #FFF, 30px 1448px #FFF, 1265px 926px #FFF, 1310px 105px #FFF, 1681px 1942px #FFF, 537px 1551px #FFF, 1584px 1150px #FFF, 723px 1979px #FFF, 1392px 956px #FFF, 1575px 1152px #FFF, 213px 1153px #FFF, 214px 288px #FFF, 1807px 1299px #FFF, 1053px 150px #FFF, 1422px 1530px #FFF, 455px 1178px #FFF, 1775px 1437px #FFF, 163px 1638px #FFF, 1744px 1385px #FFF, 1633px 579px #FFF, 881px 1958px #FFF, 363px 1893px #FFF, 496px 719px #FFF, 1739px 1770px #FFF, 656px 1376px #FFF, 197px 325px #FFF, 845px 723px #FFF, 1676px 863px #FFF, 1501px 1723px #FFF, 117px 815px #FFF, 1164px 1321px #FFF, 1592px 461px #FFF, 1591px 1320px #FFF, 1476px 984px #FFF, 1839px 1113px #FFF, 1322px 1258px #FFF, 542px 1207px #FFF, 1560px 481px #FFF, 913px 1251px #FFF, 226px 1770px #FFF, 655px 227px #FFF, 299px 35px #FFF, 1521px 1367px #FFF, 1022px 1796px #FFF, 1102px 1732px #FFF, 1082px 1149px #FFF, 101px 779px #FFF, 1018px 610px #FFF, 21px 1012px #FFF, 1218px 1190px #FFF, 545px 1001px #FFF, 188px 425px #FFF, 738px 1880px #FFF, 1837px 1661px #FFF, 192px 83px #FFF, 1016px 981px #FFF, 771px 463px #FFF, 831px 122px #FFF, 1080px 1949px #FFF, 1909px 687px #FFF, 760px 1954px #FFF, 1708px 1548px #FFF, 1065px 1538px #FFF, 1901px 792px #FFF, 475px 543px #FFF, 1736px 204px #FFF, 1255px 1173px #FFF, 805px 1994px #FFF, 1125px 1318px #FFF, 297px 1713px #FFF, 1512px 844px #FFF, 299px 1662px #FFF, 1188px 325px #FFF, 226px 1532px #FFF, 1214px 222px #FFF, 1201px 783px #FFF, 1503px 1412px #FFF, 1909px 1188px #FFF, 1789px 751px #FFF, 1783px 644px #FFF, 1325px 614px #FFF, 1271px 1440px #FFF, 554px 665px #FFF, 276px 213px #FFF, 859px 1574px #FFF, 1001px 1189px #FFF;
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: rgba(0, 0, 0, 0);
+    animation: animStar 120s linear infinite;
+    z-index: 5;
+}
+
+.list-container {
+    position: relative;
+    left: 20vw;
+    top: 18vh;
+    width: 70vw; /* Plus large pour accommoder le contenu horizontal */
+    color: #29A806;
+    height: 60vh; /* Hauteur fixe pour le défilement */
+    overflow-y: auto; 
+    scrollbar-width: none; /* Masque la barre de défilement sur Firefox */
+    -ms-overflow-style: none; /* Masque la barre de défilement sur IE et Edge */
+}
+
+/* Masque la barre de défilement sur Chrome, Safari et les navigateurs basés sur WebKit */
+.list-container::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row; /* Images à côté du texte */
+  align-items: center;
+  gap: 20px; /* Espacement entre l'image et le texte */
+  margin: 25px 0; /* Espace vertical entre les éléments */
+  width: 95%; /* Presque toute la largeur disponible */
+  cursor: pointer;
+}
+
+.list-item img {
+  width: 35%; /* Image moins large */
+  height: auto; /* Hauteur proportionnelle */
+  min-width: 200px; /* Largeur minimale de l'image */
+  object-fit: cover;
+  border: 2px solid #29A806;
+}
+
+.list-item p {
+  flex: 1; /* Prend l'espace restant */
+}
+
+.list-item h2 {
+  margin: 0;
+  font-size: 22px;
+  text-shadow: 0 1px 1px white, 0 0 1px white;
+  margin-bottom: 12px; /* Espace entre h2 et h3 */
+}
+
+.list-item h3 {
+    margin: 0;
+    font-size: 16px;
+    text-shadow: 0 1px 1px white, 0 0 1px white;
+}

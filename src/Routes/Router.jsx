@@ -9,6 +9,10 @@ import About from './About';
 import Artists from './Artists';
 import Artist from '../components/Artist';
 import People from './People';
+import Media from './Media';
+import DirByAwge from './DirByAwge';
+import Pictures from './Pictures';
+import Contact from './Contact';
 
 const router = createBrowserRouter([
   {path: "/", element: <App />},
@@ -22,7 +26,11 @@ const router = createBrowserRouter([
   {path: "about", element: <About />},
   {path: "artist", element: <Artist />},
   {path: "artists", element: <Artists />},
-  {path: "people", element: <People />}
+  {path: "people", element: <People />},
+  {path: "media", element: <Media />},
+  {path: "dir-by-awge", element: <DirByAwge />},
+  {path: "pictures", element: <Pictures />},
+  {path: "contact", element: <Contact />}
 ]);
 
 
@@ -32,7 +40,7 @@ export const grid = [
   {id: 3, img: '', text: '', class: '', route: ''},
   {id: 4, img: '', text: '', class: '', route: ''},
   {id: 5, img: '/buttons/shop-button.gif', text: 'SHOP', route: '/shop', color: "#2A440B"},
-  {id: 6, img: '/buttons/dbd-button.gif', text: 'A$AP ROCKY', route: '/asap-rocky', color: "black"},
+  {id: 6, img: '/buttons/dbd-button.gif', text: 'A$AP ROCKY', route: '/', color: "black"},
   {id: 7, img: '/buttons/about-button.gif', text: 'ABOUT', route: '/about', color: "#d15f18"},
   {id: 8, img: '/buttons/pager-button.gif', text: 'CONTACT',  route: '/contact', color: "#2A440B"}
 ]
@@ -67,6 +75,20 @@ export const people =[
   {id:5, name: "Wally Sajimi-Tech"},
   {id:6, name: "Bladi Corniel-Photo"},
   {id:7, name: "Jimmy Regular-Video"}
+]
+
+export const dirByAwge = [ 
+  {id:1, title: "Fukk Sleep", By: "A$AP Rocky", img: '/dirByAwge/FukkSleep.gif', link: "https://www.youtube.com/watch?v=pM5XogpX1JA&pp=ygUKZnVja3NsZWVwKg%3D%3D"},
+  {id:2, title: "Kids Turned Out Fine", By: "A$AP Rocky", img: '/dirByAwge/KidsTurnedOutFine.gif', link:"https://www.youtube.com/watch?v=FUQI-o02JYU&pp=ygULa2lkcyB0dXJuZWQ%3D"},
+  {id:3, title: "Praise The Lord", By: "A$AP Rocky ft. Skepta", img: '/dirByAwge/PDL.gif', link: "https://www.youtube.com/watch?v=Kbj2Zss-5GY&pp=ygUPcHJhaXNlIHRoZSBsb3Jk"},
+  {id:4, title: "Potato Salad", By: "A$AP Rocky ft. Tyler The Creator", img: '/dirByAwge/PotatoSalad.gif', link: "https://www.youtube.com/watch?v=93M1QtYDtpU&pp=ygUMcG90YXRvIHNhbGFk"},
+  {id:5, title: "Richard Millie Plain", By: "Gunna", img: '/dirByAwge/RichardMilliePlain.gif', link: "https://www.youtube.com/watch?v=zpL3velgzmQ"}
+]
+
+export const dirByAwgeImages = [
+  {id:1, img: '/dirByAwge/flacko-1.jpg'},
+  {id:2, img: '/dirByAwge/flacko-2.jpg'},
+  {id:3, img: '/dirByAwge/flacko-3.jpg'}
 ]
 
 export default router;

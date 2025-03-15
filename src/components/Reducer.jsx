@@ -8,7 +8,13 @@ const shopSlice = createSlice({
   initialState: { 
     showBuyOut: false,
     showCart: false,
-    cart: []
+    cart: [],
+    formData: {
+      email: '',
+      subject: '',
+      message: '',
+      sendTo: ''
+    }
   },
   reducers: {
     setShowBuyOut: (state, action) => {
@@ -25,12 +31,16 @@ const shopSlice = createSlice({
     },
     setShowCart: (state, action) => {
       state.showCart = action.payload;
+    },
+    setFormData: (state, action) => {
+      state.formData = action.payload;
     }
+
   },
 });
 
 // Exporter les actions pour pouvoir les utiliser dans les composants
-export const { setShowBuyOut, addToCart, setShowCart } = shopSlice.actions;
+export const { setShowBuyOut, addToCart, setShowCart, setFormData } = shopSlice.actions;
 
 // Configurer le store
 const store = configureStore({
