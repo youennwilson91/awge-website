@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'PressStart';
-  src: url('/fonts/PressStart2P-Regular.woff2') format('woff2'),
-       url('/fonts/PressStart2P-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+@keyframes flicker {
+  0%, 19.9%, 22%, 62.9%, 64%, 64.9%, 70%, 100% {
+    opacity: 0.1;
+  }
+  20%, 21.9%, 63%, 63.9%, 65%, 69.9% {
+    opacity: 0;
+    text-shadow: none;
+  }
 }
 
 @keyframes blink {
@@ -16,24 +20,25 @@
   }
 }
 
+@layer base {
+  @font-face {
+    font-family: 'Press Start 2P';
+    src: url('/fonts/PressStart2P-Regular.woff2') format('woff2');
+    font-display: swap;
+  }
+}
 
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
 
 /* Optionnel : Appliquer à tout le site */
 body {
-  font-family: 'PressStart', sans-serif;
+  font-family:'Press Start 2P', cursive !important;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body, #root {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
 
 #root {
   width: 100%;
@@ -43,6 +48,7 @@ html, body, #root {
   text-align: center;
   background-color: black;
   position: relative;
+  overflow: hidden;
 }
 
 /* Ajouter un pseudo-élément pour la bordure qui sera toujours au-dessus */
@@ -53,10 +59,102 @@ html, body, #root {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/border.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   pointer-events: none; /* Permet aux clics de passer à travers */
   z-index: 9999; /* Valeur très élevée pour s'assurer qu'elle est au-dessus de tout */
+}
+
+@media (min-width: 1024px) { /* Correspond à lg en Tailwind */
+  #root::after {
+    background-image: url('/border.png');
+  }
+}
+
+
+.bckg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Position sous la bordure */
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Version mobile de .bckg pour les écrans de moins de 1024px */
+@media (max-width: 1023px) {
+  .bckg {
+    background-image: none;
+    background-color: #E6E2E2;
+    justify-content: flex-start;
+  }
+  
+  .bckg::before, .bckg::after {
+    /* Effets CRT moins prononcés sur mobile */
+    opacity: 0.5;
+  }
+}
+
+.bckg::before {  
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(43, 38, 38, 0) 50%, rgba(0, 0, 0, 0.08) 50%), 
+  linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.005), rgba(0, 0, 255, 0.02));
+  z-index: 9995;  
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+  
+.bckg::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  z-index: 9996;  
+  pointer-events: none;
+  animation: flicker .15s infinite;
+}
+
+.home-copyright {
+  position: relative;
+  padding-top: 5px;
+  font-size: 0.65em;
+  line-height: 1.1;
+  opacity: 90%;
+}
+
+.home-copyright-container {
+  position: relative;
+  top: 7vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.836);
+}
+
+.home-copyright-container-mobile {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.836);
 }

@@ -45,6 +45,15 @@ export const grid = [
   {id: 8, img: '/buttons/pager-button.gif', text: 'CONTACT',  route: '/contact', color: "#2A440B"}
 ]
 
+export const grid_mobile = [
+  {id: 3, img: '/buttons/shop-button.gif', text: 'SHOP', route: '/shop', color: "#2A440B"},
+  {id: 4, img: '/buttons/dbd-button.gif', text: 'A$AP ROCKY', route: '/', color: "black"},
+  {id: 2, img: '/buttons/awgeDVD-button.gif', text: 'DVD', route: '/dvd', color: "black"},
+  {id: 6, img: '/buttons/pager-button.gif', text: 'CONTACT',  route: '/contact', color: "#2A440B"},
+  {id: 1, img: '/buttons/user-button.gif', text: 'FORUM', route: '/forum', color: "#d15f18"},
+  {id: 5, img: '/buttons/about-button.gif', text: 'ABOUT', route: '/about', color: "#d15f18"},
+]
+
 export const dvd = [
   {id: 1, path: "/dvd-vol-1"},
   {id: 2, path: "/dvd-vol-2"},
